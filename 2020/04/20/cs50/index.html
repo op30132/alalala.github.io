@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://op30132.github.io').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="目標對象 非本科系前端工程師 Javascript 為母語者 開發經驗 &lt; 一年">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[課程推薦] CS50 開啟你的計算機大門之超推薦心得!!">
+<meta property="og:url" content="https://op30132.github.io/2020/04/20/cs50/index.html">
+<meta property="og:site_name" content="Winnie&#39;s blog">
+<meta property="og:description" content="目標對象 非本科系前端工程師 Javascript 為母語者 開發經驗 &lt; 一年">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-04-20T11:40:00.000Z">
+<meta property="article:modified_time" content="2020-06-24T14:46:04.909Z">
+<meta property="article:author" content="Winnie">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://op30132.github.io/2020/04/20/cs50/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>[課程推薦] CS50 開啟你的計算機大門之超推薦心得!! | Winnie's blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154744757-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-154744757-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Winnie's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>歸檔</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://op30132.github.io/2020/04/20/cs50/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Winnie">
+      <meta itemprop="description" content="API 調用師">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Winnie's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [課程推薦] CS50 開啟你的計算機大門之超推薦心得!!
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2020-04-20 11:40:00" itemprop="dateCreated datePublished" datetime="2020-04-20T11:40:00+00:00">2020-04-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2020-06-24 14:46:04" itemprop="dateModified" datetime="2020-06-24T14:46:04+00:00">2020-06-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CS50/" itemprop="url" rel="index">
+                    <span itemprop="name">CS50</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="目標對象"><a href="#目標對象" class="headerlink" title="目標對象"></a>目標對象</h2><ul>
+<li>非本科系前端工程師</li>
+<li>Javascript 為母語者</li>
+<li>開發經驗 &lt; 一年</li>
+</ul>
+<a id="more"></a>
+<p>對，94我</p>
+<h2 id="計算機入門必修課導讀"><a href="#計算機入門必修課導讀" class="headerlink" title="計算機入門必修課導讀"></a>計算機入門必修課導讀</h2><p>CS50 全名 Computer Science 50，是哈佛大學開的計算機入門課程，相信很多有心入門前端的同學們都會看到相關課程推薦，那這門課到底厲害在哪?</p>
+<p>直接到 <a href="https://cs50.harvard.edu/x/2020/" target="_blank" rel="noopener">CS50官網</a>，可以看到每個禮拜的課程內容</p>
+<p>Week 0 Scratch 😺<br>Week 1 C<br>Week 2 Arrays<br>Week 3 Algorithms<br>Week 4 Memory<br>Week 5 Data Structures<br>Week 6 Python 🐍<br>Week 7 SQL<br>Week 8 Information</p>
+<p>點進去可以看到他很貼心的幫你把每周影片、上課講義、作業等，甚至有助教講解的短影片，沒耐心看完1小時半的影片的可以直接看重點整理的 note，英文不好的就 google 一鍵翻譯，讓學習更有效率</p>
+<p>重點來了</p>
+<h3 id="看影片或講義只是熱身，想要真正學到東西並能運用，一定要做每周作業"><a href="#看影片或講義只是熱身，想要真正學到東西並能運用，一定要做每周作業" class="headerlink" title="看影片或講義只是熱身，想要真正學到東西並能運用，一定要做每周作業!!"></a>看影片或講義只是熱身，想要真正學到東西並能運用，一定要做每周作業!!</h3><p>至少，到 Python 前的作業都一定要做過</p>
+<p>為什麼這麼說? </p>
+<p>我半年前曾試圖看完 youtube 上的 CS50 影片，但效率奇差且只學到皮毛，由於沒有實際寫 C 語言，因此毫無成就感與動力，看了兩三周就放棄</p>
+<p>這次改變策略，不逼自己看那 1小時半的影片，但一定要做作業，直接落實做中學，一個月就嗑完全部內容!!</p>
+<h2 id="關於作業"><a href="#關於作業" class="headerlink" title="關於作業"></a>關於作業</h2><p>CS50 非常貼心的架了線上 CS50 IDE，不用煩惱要下載什麼東西，只要有 github 帳號登入即可線上寫 code、編譯並執行，所有作業可以在線上完成，非常方便</p>
+<p>但是沒修過計概沒寫過 C、JAVA的估計有些作業會卡一陣子，因為題目實在太活了，比如簡單加密、相片修復、圖檔轉灰階等等乍看之下很難的題目，設計者很有巧思的將演算法、數據結構等抽象的概念融合進這些實際的例子，讓你在實作過程理解並運用所學，這也是如此推薦此課程的原因</p>
+<p>卡關的時候可以參考別人的程式激發靈感，以下是有關 C 的作業，那我的作業版本是 2019 年的，目前都是可以運行並達成要求的，有寫錯或是有更好寫法的請指教</p>
+<p><a href="https://github.com/op30132/CS50-2019" target="_blank" rel="noopener">https://github.com/op30132/CS50-2019</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/17/postman-script/" rel="prev" title="實用 Postman 技巧:  pre-script + test 一鍵判斷 API 是否可用">
+      <i class="fa fa-chevron-left"></i> 實用 Postman 技巧:  pre-script + test 一鍵判斷 API 是否可用
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/24/git-reflog/" rel="next" title="[實用git系列]強制刪除分支後驚覺不對之終極補救教學">
+      [實用git系列]強制刪除分支後驚覺不對之終極補救教學 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目標對象"><span class="nav-number">1.</span> <span class="nav-text">目標對象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#計算機入門必修課導讀"><span class="nav-number">2.</span> <span class="nav-text">計算機入門必修課導讀</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#看影片或講義只是熱身，想要真正學到東西並能運用，一定要做每周作業"><span class="nav-number">2.1.</span> <span class="nav-text">看影片或講義只是熱身，想要真正學到東西並能運用，一定要做每周作業!!</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#關於作業"><span class="nav-number">3.</span> <span class="nav-text">關於作業</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Winnie</p>
+  <div class="site-description" itemprop="description">API 調用師</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Winnie</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 強力驅動 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主題 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '4d04e480bbb2fbe2bbd6',
+      clientSecret: '3b14c84be0e27c5f25748fd158c25581c827f1b4',
+      repo: 'op30132.github.io',
+      owner: 'op30132',
+      admin: ['op30132'],
+      id: '223f740a3e2588f4be09de1185d7a392',
+        language: 'zh-TW',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
